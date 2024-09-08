@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .topnav {
+ overflow: hidden;
+ background-color: aqua;
+  }
+  .topnav a {
+    float: left;
+    color: greenyellow;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  .topnav a:hover {
+    background-color: blue;
+color: black;
+  }
+  .topnav a.active {
+    background-color: aquamarine;
+    color:green
+  }
+</style>
+</head>
+<body>
+  <h1>Sceneries</h1>
+ <div class="topnav">
+  <a class="active" href="#home">Home</a>
+  <a href="#">About us</a>
+  <a href="#">Gallery</a>
+  <a href="#">Contact us</a>
+ </div>
+ <section>
+    <img class="mySlides" src="pic1.jpg" height="300" width="300" >
+   <img class="mySlides" src="pic3.jpg" height="300" width="300">
+   <img class="mySlides" src="pic4.jpg" height="300" width="300">
+   <img class="mySlides" src="scenerio bd 1.jpg" height="300" width="300">
+   <img class="mySlides" src="scenerio bd 2.png" height="300" width="300">
+   <img class="mySlides" src="scenerio bd 3.jpeg" height="300" width="300">
+
+   
+  </section>
+  
+<script>
+var myIndex = 0
+carousel()
+function carousel() {
+  var i;
+var x = document.getElementsByClassName("mySlides")
+for (i = 0; i < x.length; i++) {
+ x[i].style.display = "none";
+}
+myIndex++;
+if (myIndex > x.length) {myIndex = 1}
+x[myIndex-1].style.display="block";
+setTimeout(carousel, 3000);
+
+}
+
+</script>
+</body>
+</html>
